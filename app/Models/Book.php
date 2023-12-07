@@ -28,8 +28,11 @@ class Book extends BaseModel
         return $this->belongsTo(Author::class);
     }
 
-    public function borrowed()
+    public function scopeBorrowed(Builder $query)
     {
-        return $this->hasOne(BorrowerDetails::class);
+        // return $query->join('borrower_details', function)->whereIn('status', [
+        //     config('constants.BORROW_STATUS.PENDING'),
+        //     config('constants.BORROW_STATUS.OUT_OF_TIME'),
+        // ]);
     }
 }

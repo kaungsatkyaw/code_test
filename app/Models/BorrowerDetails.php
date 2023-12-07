@@ -17,8 +17,8 @@ class BorrowerDetails extends BaseModel
         'customer_id',
         'book_id',
         'status',
-        'start_time',
-        'end_time',
+        'start_date',
+        'end_date',
         'actual_return_time',
     ];
 }

@@ -1,8 +1,10 @@
 <?php
 return [
-    'BORROW_STATUS_TXT' => [
-        1 => 'Pending',
-        2 => 'Out of time',
-        3 => 'Returned',
-    ]
+    'BORROW_STATUS' => [
+        'PENDING' => 1,
+        'OUT_OF_TIME' => 2,
+        'RETURNED' => 3,
+    ],
+    
+    'DEFAULT_BORROW_DAY' => 7,
 ];

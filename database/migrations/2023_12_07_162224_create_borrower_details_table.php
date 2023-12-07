@@ -18,9 +18,9 @@ class CreateBorrowerDetailsTable extends Migration
             $table->unsignedBigInteger('customer_id');
             $table->unsignedBigInteger('book_id');
             $table->integer('status');
-            $table->date('start_time');
-            $table->date('end_time');
-            $table->datetime('actual_return_time');
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->datetime('actual_return_time')->nullable();
             $table->timestamps();
             $table->softDeletes();
 

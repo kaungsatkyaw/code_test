@@ -18,7 +18,7 @@ class AuthorController extends Controller
      */
     public function index()
     {
-        return new AuthorResource(Author::with('books')->customFilter()->pagination());
+        return new AuthorResource(Author::with('books')->customFilter(['name'])->pagination());
     }
 
     /**

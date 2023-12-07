@@ -21,5 +21,8 @@ Route::group(['namespace' => 'Api'], function () {
         Route::resource('authors', 'AuthorController');
 
         Route::resource('customers', 'CustomerController');
+
+        Route::post('book/borrow', 'BorrowController@borrowBook');
+        Route::post('book/return/{book_id}', 'BorrowController@returnBook');
     });
 });

@@ -18,7 +18,13 @@ class BookController extends Controller
      */
     public function index()
     {
-        return new BookResource(Book::with('author')->customFilter()->pagination());
+        $books = Book::leftJoin('borrower_details', 'borrower_details.book_id', 'books.id')
+            ->with('author')
+            ->customFilter(['title'])
+            ->select('books.title', 'borrower_details.status', 'books.author_id')
+            ->pagination();
+
+        return new BookResource($books);
     }
 
     /**

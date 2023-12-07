@@ -17,7 +17,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        return new CustomerResource(Customer::customFilter()->pagination());
+        return new CustomerResource(Customer::customFilter(['name', 'customer_no', 'phone'])->pagination());
     }
 
     /**
